@@ -111,6 +111,8 @@ body {
   padding: 0 1.5rem;
   position: relative;
 
+  display: flex;
+  align-items: center;
   transition: all 0.2s;
 }
 
@@ -126,6 +128,7 @@ body {
   border: none;
   outline: none;
   color: inherit;
+  font-size: inherit;
 }
 
 .header__search-lable {
@@ -295,10 +298,22 @@ cart section start
   overflow: hidden;
   background-color: var(--light-bg);
   box-shadow: 0 0 1.4rem rgba(0, 0, 0, 0.4);
+
+  transition: all 0.3s;
+}
+
+.cart:hover {
+  filter: brightness(1.1);
+  transform: scale(1.01);
+}
+
+.cart__img-wrapper {
+  height: 22rem;
 }
 
 .cart__img {
   width: 100%;
+  height: 22rem;
 }
 
 .cart__title {

@@ -1,3 +1,4 @@
+const container = document.querySelector('.container');
 const btnChangeTheme = document.querySelector('.header__theme-btn');
 
 /**
@@ -47,3 +48,60 @@ const theme = function () {
   });
 };
 theme();
+
+let data;
+
+const renderCountry = function (country) {
+  const html = `
+        <div class="cart">
+         <div class="cart__img-wrapper">
+            <img
+            src="${country.flags.png}"
+            alt="country flag"
+            class="cart__img"
+            />
+          </div>
+          
+          <h2 class="cart__title">${country.name.official}</h2>
+          <ul class="cart__infos">
+            <li class="cart__info">
+              <strong>Capital:</strong>
+              ${country.capital[0]}
+            </li>
+            <li class="cart__info">
+              <strong>Region:</strong>
+              ${country.region}
+            </li>
+            <li class="cart__info">
+              <strong>Population:</strong>
+              ${(country.population / 1_000_000).toFixed(1)}M
+            </li>
+          </ul>
+        </div>`;
+
+  container.insertAdjacentHTML('afterbegin', html);
+};
+
+const getData = async function () {
+  try {
+    if (JSON.parse(localStorage.getItem('data'))) {
+      data = JSON.parse(localStorage.getItem('data'));
+      return;
+    }
+
+    const respons = await fetch(
+      'https://restcountries.com/v3.1/independent?status=true'
+    );
+
+    data = await respons.json();
+
+    localStorage.setItem('data', JSON.stringify(data));
+  } catch (err) {
+    console.log('Problem in fetching data');
+    console.log(err);
+  }
+};
+getData();
+
+data.forEach(country => renderCountry(country));
+console.log(data);
