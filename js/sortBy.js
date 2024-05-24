@@ -13,6 +13,10 @@ let searchData = data;
 let sortBy = null;
 let filterBy = null;
 
+/**
+ * Events
+ */
+
 const open = function (optionList) {
   layout.classList.remove('layout--hidden');
   optionList.classList.remove('filter__options--hidden');
@@ -74,44 +78,50 @@ filterByOptions.addEventListener('click', function (e) {
   finalData(sortBy, filterBy);
 });
 
+/**
+ * Functionality
+ */
+
 const finalData = function (sortBy, filterBy) {
-  console.log(sortBy);
+  console.log(sortBy, filterBy);
   renderedData = filterBy
-    ? searchData.filter(dt => {
+    ? data.filter(dt => {
         return dt.region.toLowerCase() === filterBy;
       })
-    : searchData;
+    : data;
 
   console.log(renderedData);
 
   if (sortBy === 'name') {
-    renderedData = searchData
+    renderedData = renderedData
       .flatMap(el => el.name.common)
       .sort()
-      .map(name => searchData.find(el => el.name.common === name));
+      .map(name => renderedData.find(el => el.name.common === name));
   }
   if (sortBy === 'population') {
-    renderedData = searchData
+    renderedData = renderedData
       .map(el => el.population)
       .sort((a, b) => b - a)
-      .map(num => searchData.find(el => el.population === num));
+      .map(num => renderedData.find(el => el.population === num));
   }
   if (sortBy === 'area') {
-    renderedData = [...new Set(searchData.map(el => el.region))]
+    renderedData = [...new Set(renderedData.map(el => el.region))]
       .sort()
       .flatMap(region => {
-        return searchData.filter(country => country.region === region);
+        return renderedData.filter(country => country.region === region);
       });
   }
 
+  console.log(searchData);
   console.log(renderedData);
 
-  renderCountries(renderedData);
+  search();
 };
 renderCountries(renderedData);
 
-searchInput.addEventListener('keyup', function () {
+const search = function () {
   const searchFor = searchInput.value;
+  console.log(searchFor);
 
   searchData = renderedData
     .flatMap(el => el.name.common)
@@ -121,4 +131,6 @@ searchInput.addEventListener('keyup', function () {
   console.log(searchData);
 
   renderCountries(searchData);
-});
+};
+
+searchInput.addEventListener('keyup', search);

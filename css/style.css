@@ -337,3 +337,14 @@ cart section start
   height: 100%;
   overflow: hidden;
 }
+
+.error {
+  background-color: rgba(256, 0, 0, 0.1);
+  border: 1px solid #f00;
+  border-radius: 1rem;
+  padding: 2.5rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
