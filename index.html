@@ -93,7 +93,7 @@
             class="filter__options filter__options--hidden"
             id="sort-by__options"
           >
-            <li class="filter__option filter__option--checked" id="name">
+            <li class="filter__option" data-option="name">
               <svg
                 class="filter__option-icon"
                 focusable="false"
@@ -107,7 +107,7 @@
               </svg>
               <p class="filter__option-name">name</p>
             </li>
-            <li class="filter__option" id="population">
+            <li class="filter__option" data-option="population">
               <svg
                 class="filter__option-icon"
                 focusable="false"
@@ -121,7 +121,7 @@
               </svg>
               <p class="filter__option-name">population</p>
             </li>
-            <li class="filter__option" id="area">
+            <li class="filter__option" data-option="area">
               <svg
                 class="filter__option-icon"
                 focusable="false"
@@ -171,7 +171,7 @@
             class="filter__options filter__options--hidden"
             id="filter-by__options"
           >
-            <li class="filter__option filter__option--checked" id="africa">
+            <li class="filter__option" data-option="africa">
               <svg
                 class="filter__option-icon"
                 focusable="false"
@@ -185,7 +185,7 @@
               </svg>
               <p class="filter__option-name">africa</p>
             </li>
-            <li class="filter__option" id="americas">
+            <li class="filter__option" data-option="americas">
               <svg
                 class="filter__option-icon"
                 focusable="false"
@@ -199,7 +199,7 @@
               </svg>
               <p class="filter__option-name">americas</p>
             </li>
-            <li class="filter__option" id="asia">
+            <li class="filter__option" data-option="asia">
               <svg
                 class="filter__option-icon"
                 focusable="false"
@@ -212,6 +212,34 @@
                 ></path>
               </svg>
               <p class="filter__option-name">asia</p>
+            </li>
+            <li class="filter__option" data-option="europe">
+              <svg
+                class="filter__option-icon"
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-testid="CheckIcon"
+              >
+                <path
+                  d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                ></path>
+              </svg>
+              <p class="filter__option-name">europe</p>
+            </li>
+            <li class="filter__option" data-option="oceania">
+              <svg
+                class="filter__option-icon"
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-testid="CheckIcon"
+              >
+                <path
+                  d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                ></path>
+              </svg>
+              <p class="filter__option-name">oceania</p>
             </li>
           </ul>
         </div>

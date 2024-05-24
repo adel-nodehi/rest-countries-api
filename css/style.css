@@ -193,6 +193,7 @@ body {
 
 .filter__options {
   position: absolute;
+  z-index: 5;
 
   list-style: none;
   background-color: var(--menu-bg);
@@ -330,4 +331,9 @@ cart section start
 
 .cart__info:not(:last-child) {
   margin-bottom: 0.2rem;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
