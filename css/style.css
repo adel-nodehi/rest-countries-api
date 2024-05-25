@@ -96,7 +96,7 @@ body {
 }
 
 .header__bottom {
-  max-width: 1440px;
+  max-width: 166rem;
   margin: 0 auto;
   padding: 2.5rem 4rem;
 
@@ -123,6 +123,7 @@ body {
 }
 
 .header__search-input {
+  width: 100%;
   background-color: transparent;
   height: 5.5rem;
   border: none;
@@ -287,10 +288,11 @@ cart section start
 }
 
 .container {
-  max-width: 120rem;
+  max-width: 160rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 5rem;
 }
 
@@ -347,4 +349,49 @@ cart section start
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+@media only screen and (max-width: 786px) {
+  .header__bottom {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .header__search {
+    width: 100%;
+  }
+
+  .header__filter-wrapper {
+    width: 100%;
+  }
+
+  .header__sort-by {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .header__filter-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .header__theme-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  .header__theme-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .header__theme-text {
+    display: none;
+  }
 }

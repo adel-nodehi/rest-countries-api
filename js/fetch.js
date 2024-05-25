@@ -20,7 +20,7 @@ try {
     <h2>Something went wrong</h2>
     <p><strong>error massage:</strong> ${err.message}</p>
 
-    turn on your vpn and try again.
+    turn on your vpn or change your server and try again.
   </div>`;
 
   document.querySelector('.main').insertAdjacentHTML('afterbegin', html);
