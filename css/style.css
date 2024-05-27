@@ -202,16 +202,17 @@ body {
   padding: 0;
   padding: 0.8rem 0;
   margin: 0;
+  transition: all 0.3s;
 
   visibility: visible;
   opacity: 1;
-  display: block;
+  transform: translateY(0);
 }
 
 .filter__options--hidden {
   visibility: hidden;
   opacity: 0;
-  display: none;
+  transform: translateY(-10px);
 }
 
 #sort-by__options {
@@ -221,7 +222,7 @@ body {
 
 #filter-by__options {
   right: 0;
-  top: 5.8rem;
+  top: 100%;
 }
 
 .filter__option {
