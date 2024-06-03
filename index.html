@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <!-- <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-    /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/e74bd487f0.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/brackpoints.css" />
 
     <script defer type="module" src="./js/script.js"></script>
   </head>
@@ -247,8 +249,86 @@
       </div>
     </header>
 
+    <div class="pagination">
+      <button class="pagination__btn pagination__previous-btn">
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-1qz46so"
+          focusable="false"
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          data-testid="NavigateBeforeIcon"
+        >
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+        </svg>
+      </button>
+      <div class="pagination__btns"></div>
+      <button class="pagination__btn pagination__next-btn">
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-1qz46so"
+          focusable="false"
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          data-testid="NavigateNextIcon"
+        >
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+        </svg>
+      </button>
+    </div>
+
     <main class="main">
       <div class="container"></div>
+
+      <div class="pagination"></div>
     </main>
+
+    <!-- <div class="modal ">
+      <button class="modal__back-home">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Countries
+      </button>
+
+      <div class="modal__container container">
+        <img src="https://flagcdn.com/md.svg" alt="country image" class="modal__img" />
+
+        <div class="modal__content">
+          <h2 class="modal__title">country name</h2>
+
+          <div class="modal__list-wrapper">
+            <ul class="modal__list">
+              <li class="modal__item"><strong>native name:</strong>some thing</li>
+              <li class="modal__item"><strong>population:</strong>some thing</li>
+              <li class="modal__item"><strong>region:</strong>some thing</li>
+              <li class="modal__item"><strong>subregion:</strong>some thing</li>
+
+            </ul>
+
+            <ul class="modal__list">
+              <li class="modal__item"><strong>top level domain:</strong>some thing</li>
+              <li class="modal__item"><strong>currencies:</strong>some thing</li>
+              <li class="modal__item"><strong>language:</strong>some thing</li>
+              <li class="modal__item"><strong>capital:</strong>some thing</li>
+
+            </ul>
+          </div>
+
+          <p class="modal__borders">
+            <strong>bordering countries:</strong>
+
+            <div class="modal__tag">
+              <img src="https://flagcdn.com/md.svg" alt="country flag" class="tag__img">
+
+              <p class="tag__name">can</p>
+
+            </div>
+
+          </p>
+
+          <a href="#" class="modal__google-map">google maps</a>
+
+
+
+        </div>
+      </div>
+    </div> -->
   </body>
 </html>
