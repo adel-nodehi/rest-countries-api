@@ -44,6 +44,7 @@ body {
 }
 
 .header__top {
+  height: 10rem;
   background-color: var(--light-bg);
   padding: 2.5rem 6rem;
   box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
@@ -395,4 +396,131 @@ cart section start
   .header__theme-text {
     display: none;
   }
+}
+
+/*
+
+ Modal Styles
+
+*/
+
+.modal {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 10rem);
+  padding: 2rem 6rem;
+
+  background-color: var(--dark-bg);
+  font-size: 1.8rem;
+}
+
+.modal__back-home {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  border: 1px solid var(--text-color-light);
+  border-radius: 5px;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.modal__back-home i {
+  margin-right: 0.5rem;
+}
+
+.modal__back-home:hover {
+  background-color: var(--light-bg);
+}
+
+.modal__container {
+  width: 100%;
+
+  display: flex;
+  gap: 4rem;
+}
+
+.modal__img {
+  max-width: 60rem;
+
+  /*  flex: 0 0 30rem; 
+  flex-basis: 30rem;
+  flex-grow: 0;
+
+  object-fit: contain; */
+}
+
+.modal__content {
+}
+
+.modal__title {
+}
+
+.modal__list-wrapper {
+}
+
+.modal__list {
+}
+
+.modal__item {
+}
+
+.modal__borders {
+}
+
+.modal__tag {
+}
+
+.tag__img {
+  width: 20%;
+}
+
+.tag__name {
+}
+
+.modal__google-map {
+}
+
+/*
+
+ Pagination
+
+ */
+
+.pagination {
+  width: 80%;
+  margin: 1rem auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.pagination__btns {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.pagination__btn {
+  width: 4rem;
+  height: 4rem;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid var(--text-color-light);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pagination__btn:hover {
+  background-color: var(--list-active-hover-bg);
+}
+
+.pagination__btn--active {
+  background-color: var(--list-active-bg);
+}
+
+svg {
+  fill: currentColor;
 }
