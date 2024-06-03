@@ -1,5 +1,5 @@
 import { data } from './fetch.js';
-import { renderCountries } from './renderCountry.js';
+import pagination from './pagination.js';
 
 const sortByOptions = document.querySelector('#sort-by__options');
 const filterByOptions = document.querySelector('#filter-by__options');
@@ -117,20 +117,18 @@ const finalData = function (sortBy, filterBy) {
 
   search();
 };
-renderCountries(renderedData);
+
+pagination.render(searchData);
 
 const search = function () {
   const searchFor = searchInput.value;
-  console.log(searchFor);
 
   searchData = renderedData
     .flatMap(el => el.name.common)
     .filter(country => country.toLowerCase().startsWith(searchFor))
     .map(name => renderedData.find(el => el.name.common === name));
 
-  console.log(searchData);
-
-  renderCountries(searchData);
+  pagination.render(searchData);
 };
 
 searchInput.addEventListener('keyup', search);
