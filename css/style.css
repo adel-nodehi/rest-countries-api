@@ -292,13 +292,14 @@ cart section start
 .container {
   max-width: 160rem;
   margin: 0 auto;
-  display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 5rem;
 }
 
 .cart {
+  width: 360px;
   border-radius: 5px;
   overflow: hidden;
   background-color: var(--light-bg);
@@ -523,4 +524,10 @@ cart section start
 
 svg {
   fill: currentColor;
+}
+
+@media screen and (max-width: 768px) {
+  .pagination__btns > .pagination__btn:not(.pagination__btn--active) {
+    display: none;
+  }
 }
