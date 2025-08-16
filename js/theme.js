@@ -14,7 +14,7 @@ const moonSVG =
 
 const btnChangeTheme = document.querySelector('.header__theme-btn');
 
-const capilize = word => `${word[0].toUpperCase()}${word.slice(1)}`;
+const capitalize = word => `${word[0].toUpperCase()}${word.slice(1)}`;
 
 const theme = function () {
   const updateLocalStorageTheme = function (theme) {
@@ -33,7 +33,7 @@ const theme = function () {
 
     if (!btnChangeTheme.querySelector('p')) return;
 
-    btnChangeTheme.querySelector('p').textContent = `${capilize(
+    btnChangeTheme.querySelector('p').textContent = `${capitalize(
       changeTo === 'dark' ? 'light' : 'dark'
     )} Mode`;
   };

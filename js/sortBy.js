@@ -83,14 +83,13 @@ filterByOptions.addEventListener('click', function (e) {
  */
 
 const finalData = function (sortBy, filterBy) {
-  console.log(sortBy, filterBy);
+  console.log(`sort by: ${sortBy || '---'} \nfilter by: ${filterBy || '---'}`);
+
   renderedData = filterBy
     ? data.filter(dt => {
         return dt.region.toLowerCase() === filterBy;
       })
     : data;
-
-  console.log(renderedData);
 
   if (sortBy === 'name') {
     renderedData = renderedData
@@ -112,7 +111,6 @@ const finalData = function (sortBy, filterBy) {
       });
   }
 
-  console.log(searchData);
   console.log(renderedData);
 
   search();

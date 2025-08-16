@@ -133,7 +133,7 @@ body {
   font-size: inherit;
 }
 
-.header__search-lable {
+.header__search-label {
   color: var(--text-color-light);
   background-color: var(--dark-bg);
   padding: 0 0.7rem;

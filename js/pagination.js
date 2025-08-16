@@ -2,7 +2,7 @@ import { renderCountries } from './renderCountry.js';
 
 const btnContainer = document.querySelector('.pagination__btns');
 const btnPrevious = document.querySelector('.pagination__previous-btn');
-const btnnext = document.querySelector('.pagination__next-btn');
+const btnNext = document.querySelector('.pagination__next-btn');
 
 const itemPerPage = 20;
 let currentPage = 1;
@@ -10,7 +10,7 @@ let currentPage = 1;
 let currentData;
 
 ////////////////////////////
-// Funtions
+// Functions
 
 const createBtns = function () {
   const btnCount = Math.ceil(currentData.length / itemPerPage);
@@ -76,10 +76,10 @@ btnPrevious.addEventListener('click', function () {
   renderPage();
 });
 
-btnnext.addEventListener('click', function () {
-  const maxPageNumpers = Math.ceil(currentData.length / itemPerPage);
+btnNext.addEventListener('click', function () {
+  const maxPageNumbers = Math.ceil(currentData.length / itemPerPage);
 
-  if (currentPage >= maxPageNumpers) return;
+  if (currentPage >= maxPageNumbers) return;
 
   currentPage++;
   renderPage();

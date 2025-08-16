@@ -6,11 +6,11 @@ try {
     data = JSON.parse(localStorage.getItem('data'));
   } else {
     console.log('fetching data');
-    const respons = await fetch(
+    const response = await fetch(
       'https://restcountries.com/v3.1/independent?status=true'
     );
 
-    data = await respons.json();
+    data = await response.json();
 
     localStorage.setItem('data', JSON.stringify(data));
   }
